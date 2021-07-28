@@ -12,12 +12,12 @@
             "dest": "/index.js"
         },
         {
-            "src": "/",
+            "src": "/home",
             "methods": [
                 "POST",
                 "GET"
             ],
-            "dest": "/index.js"
+            "dest": "/views/home.ejs"
         }
     ]
 }
