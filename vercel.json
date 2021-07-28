@@ -10,8 +10,14 @@
         {
             "src": "/",
             "dest": "/index.js"
+        },
+        {
+            "src": "/home",
+            "methods": [
+                "POST",
+                "GET"
+            ],
+            "dest": "/index.js"
         }
     ]
 }
-
-
