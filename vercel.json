@@ -1,9 +1,16 @@
 {
-    "version": 2,
-    "builds": [
+    "routes": [
         {
-            "src": "index.js",
-            "use": "@now/node-server"
+            "src": "/",
+            "dest": "/index.js"
+        },
+        {
+            "src": "/home",
+            "methods": [
+                "POST",
+                "GET"
+            ],
+            "dest": "/views/home.ejs"
         }
     ]
 }
