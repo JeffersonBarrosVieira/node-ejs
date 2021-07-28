@@ -23,7 +23,6 @@
     "mongodb": "^4.0.1"
   },
   "devDependencies": {
-    "@now/node-server": "^0.8.2",
     "@vercel/node": "^1.11.1"
   }
 }
