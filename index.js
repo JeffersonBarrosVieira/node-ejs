@@ -3,9 +3,9 @@ const app = express();
 
 app.set('view engine', 'ejs') // Definindo qual engine o node vai utilizar (neste caso o Ejs)
 
-// app.get('/', (req, res) => {
-//     res.render('../views/home')
-// })
+app.get('/home', (req, res) => {
+    res.render('../views/home')
+})
 
 app.get('/', (req, res) => {
     res.json({
