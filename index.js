@@ -24,7 +24,7 @@ const standardResponse = (err, html, res) => {
     if (err) {
         console.log(err);
         // Passing null to the error response to avoid infinite loops XP
-        return res.status(500).render(`login.ejs`, { page : '500', error: err }, (err, html) => standardResponse(null, html, res));
+        return res.status(500).render(`login.ejs`, { msg : '500', error: err }, (err, html) => standardResponse(null, html, res));
         // Otherwise return the html
     } else {
         return res.status(200).send(html);
@@ -33,7 +33,7 @@ const standardResponse = (err, html, res) => {
 
 app.get('/login', async (req, res) =>{
       // layout.ejs is my version of blocking. I pass the page name as an option to render custom pages in the template
-      return await res.render(`login.ejs`, { page : 'login' }, (err, html) => standardResponse(err, html, res));
+      return await res.render(`login.ejs`, { msg : 'login' }, (err, html) => standardResponse(err, html, res));
 })
 
 app.get('/', (req, res) => res.send('Rota da Página Inicial'));
@@ -44,12 +44,11 @@ app.get('/portfolio', (req, res) => res.send('Rota da Página Portfólio'));
 
 app.get('/contact', (req,res) => {
 
-    // ejs.renderFile('routes/contact.ejs', {msg: "mensagem inserida"}, (err, data) => {
-    //     console.log(err);
-    //     res.send(data);
-    // });
+    res.status(500).render('login.ejs', {msg: "mensagem inserida"}, (err, data) => {
+        console.log(err);
+        res.send(data);
+    });
 
-    let html = ejs.renderFile()
 });
 
 const port = process.env.PORT || 5000;
