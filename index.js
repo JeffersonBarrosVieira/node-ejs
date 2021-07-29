@@ -8,7 +8,7 @@ app.get('/about', (req, res) => res.send('About Page Route'));
 
 app.get('/portfolio', (req, res) => res.send('Portfolio Page Route'));
 
-app.get('/contact', (req, res) => res.send('Contact Page Route'));
+app.get('/home', (req, res) => res.render('../views/home'));
 
 const port = process.env.PORT || 3000;
 
