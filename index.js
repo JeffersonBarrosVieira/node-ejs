@@ -11,10 +11,8 @@ app.get('/about', (req, res) => res.send('Rota da Página Sobre'));
 app.get('/portfolio', (req, res) => res.send('Rota da Página Portfólio'));
 
 app.get('/teste', (req,res) => {
-
-    var msg='Funcionou!!';
-
-    ejs.renderFile('views/index.ejs', {msg:msg}, (err, data) => {
+    
+    ejs.renderFile('views/index.ejs', (err, data) => {
         console.log(err);
         res.send(data);
     });
