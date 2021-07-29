@@ -6,8 +6,13 @@ app.set('view engine', 'ejs') // Definindo qual engine o node vai utilizar (nest
 app.use(express.static("public"));
 
 app.get('/', (req, res) => {
-    res.render('home');
+    res.send("Hello World");
 });
+
+
+// app.get('/', (req, res) => {
+//     res.render('home');
+// });
 
 // app.get('/home', (req, res) => {
 //     res.render('../views/home')
@@ -20,12 +25,14 @@ app.get('/', (req, res) => {
 //     });
 // })
 
-app.listen(3000, () => {
-    console.log("Executando na porta 3000!");
-})
+// app.listen(3000, () => {
+//     console.log("Executando na porta 3000!");
+// })
 
-module.exports = (req, res) => {
-    const { name = 'World' } = req.query;
-    res.send(`Hello ${name}!`);
-  };
-  
+
+// module.exports = (req, res) => {
+//     const { name = 'World' } = req.query;
+//     res.send(`Hello ${name}!`);
+//   };
+
+module.exports = { app };
