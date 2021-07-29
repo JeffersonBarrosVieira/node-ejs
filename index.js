@@ -21,7 +21,7 @@ const app = express();
 // });
 
 app.get('/login', function (req, res) {
-    res.sendFile(path.join(__dirname + '/views/login.html'));
+    res.sendFile(path.join(__dirname + '/routes/login.html'));
 });
 
 app.get('/', (req, res) => res.send('Rota da Página Inicial'));
