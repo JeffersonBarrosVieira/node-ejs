@@ -1,9 +1,9 @@
 const express = require('express');
 const app = express();
 
-app.set('view engine', 'ejs') // Definindo qual engine o node vai utilizar (neste caso o Ejs)
+// app.set('view engine', 'ejs') // Definindo qual engine o node vai utilizar (neste caso o Ejs)
 
-app.use(express.static("public"));
+// app.use(express.static("public"));
 
 app.get('/', (req, res) => {
     res.send("Hello World");
