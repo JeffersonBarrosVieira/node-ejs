@@ -19,8 +19,8 @@ app.get('/about', (req, res) => {
     res.render(path.join(__dirname + '/views/about.ejs'), {msg: "Aqui você encontrar conteúdos sobre..."});
 });
 
-app.get('/portfolio', (req, res) => {
-    res.render(path.join(__dirname + '/views/portfolio.ejs'), {msg: "Blá Blá Blá"});
+app.get('/contact', (req, res) => {
+    res.render(path.join(__dirname + '/views/contact.ejs'), {msg: "Blá Blá Blá"});
 });
 
 
