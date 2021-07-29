@@ -11,8 +11,8 @@
     "url": "git+https://github.com/jeffersonm03/mongodb-js.git"
   },
   "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "author": "Jefferson Barros Vieira",
+  "license": "MIT License",
   "bugs": {
     "url": "https://github.com/jeffersonm03/mongodb-js/issues"
   },
