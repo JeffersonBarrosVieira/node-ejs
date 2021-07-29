@@ -8,7 +8,7 @@ app.engine('ejs', ejs.renderFile);
 app.set('view engine', 'ejs');
 
 app.get('/login', function (req, res) {
-    res.render(path.join(__dirname + '/views/login.ejs'));
+    res.render(path.join(__dirname + '/views/login.ejs'), {msg: "Olá mundo!!! deu certo"});
 });
 
 app.get('/', (req, res) => res.send('Rota da Página Inicial'));
