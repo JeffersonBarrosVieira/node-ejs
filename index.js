@@ -44,7 +44,9 @@ app.get('/portfolio', (req, res) => res.send('Rota da Página Portfólio'));
 
 app.get('/contact', (req,res) => {
 
-    res.status(500).render('login.ejs', {msg: "mensagem inserida"}, (err, data) => {
+    res.set({ 'content-type': 'text/html; charset=utf-8' });
+
+    res.render('login.ejs', {msg: "mensagem inserida"}, (err, data) => {
         console.log(err);
         res.send(data);
     });
