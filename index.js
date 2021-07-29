@@ -12,7 +12,7 @@ app.get('/portfolio', (req, res) => res.send('Rota da Página Portfólio'));
 
 app.get('/contact', (req,res) => {
 
-    ejs.renderFile('routes/contact.ejs', (err, data) => {
+    ejs.renderFile('routes/contact.html', (err, data) => {
         console.log(err);
         res.send(data);
     });
