@@ -11,11 +11,17 @@ app.get('/login', function (req, res) {
     res.render(path.join(__dirname + '/views/login.ejs'), {msg: "Olá mundo!!! deu certo"});
 });
 
-app.get('/', (req, res) => res.send('Rota da Página Inicial'));
+app.get('/', (req, res) => {
+    res.render(path.join(__dirname + '/views/home.ejs'), {msg: "Seja bem vindo a Página Inicial"});
+});
 
-app.get('/about', (req, res) => res.send('Rota da Página Sobre'));
+app.get('/about', (req, res) => {
+    res.render(path.join(__dirname + '/views/about.ejs'), {msg: "Aqui você encontrar conteúdos sobre..."});
+});
 
-app.get('/portfolio', (req, res) => res.send('Rota da Página Portfólio'));
+app.get('/portfolio', (req, res) => {
+    res.render(path.join(__dirname + '/views/portfolio.ejs'), {msg: "Blá Blá Blá"});
+});
 
 
 
