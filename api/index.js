@@ -1,14 +1,9 @@
-const express = require('express');
-const app = express();
+// const express = require('express');
+// const app = express();
 
 // app.set('view engine', 'ejs') // Definindo qual engine o node vai utilizar (neste caso o Ejs)
 
-app.use(express.static("public"));
-
-app.get('/', (req, res) => {
-    res.send("Hello World");
-});
-
+// app.use(express.static("public"));
 
 // app.get('/', (req, res) => {
 //     res.render('home');
@@ -30,9 +25,6 @@ app.get('/', (req, res) => {
 // })
 
 
-// module.exports = (req, res) => {
-//     const { name = 'World' } = req.query;
-//     res.send(`Hello ${name}!`);
-//   };
-
-module.exports =  {};
+module.exports = (req, res) => {
+    res.send(`Hello World!`);
+};
