@@ -26,5 +26,5 @@
 
 
 module.exports = (req, res) => {
-    res.send(`Hello World!`);
+    res.render("../views/home");
 };
