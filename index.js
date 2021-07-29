@@ -1,6 +1,6 @@
 const express = require('express');
 const ejs = require('ejs');
-var path = require('path')
+const path = require('path')
 const app = express();
 
 app.set('views', path.join(__dirname, 'views'));
