@@ -3,25 +3,12 @@ const ejs = require('ejs');
 var path = require('path')
 const app = express();
 
-// app.set('view engine', 'ejs');
-
-// let ejsOptions = {
-//     // delimiter: '?', Adding this to tell you do NOT use this like I've seen in other docs, does not work for Express 4
-//     async: true
-// };
-
-// // The engine is using a callback method for async rendering
-// app.engine('ejs', async (path, data, cb) => {
-//     try{
-//         let html = await ejs.renderFile(path, data, ejsOptions);
-//         cb(null, html);
-//     }catch (e){
-//         cb(e, '');
-//     }
-// });
+app.set('views', path.join(__dirname, 'views'));
+app.engine('ejs', ejs.renderFile);
+app.set('view engine', 'ejs');
 
 app.get('/login', function (req, res) {
-    res.sendFile(path.join(__dirname + '/routes/login.html'));
+    res.render(path.join(__dirname + '/views/login.ejs'));
 });
 
 app.get('/', (req, res) => res.send('Rota da Página Inicial'));
