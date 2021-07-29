@@ -10,9 +10,9 @@ app.get('/about', (req, res) => res.send('Rota da Página Sobre'));
 
 app.get('/portfolio', (req, res) => res.send('Rota da Página Portfólio'));
 
-app.get('/teste', (req,res) => {
-    
-    ejs.renderFile('views/index.ejs', (err, data) => {
+app.get('/contact', (req,res) => {
+
+    ejs.renderFile('routes/contact.ejs', (err, data) => {
         console.log(err);
         res.send(data);
     });
