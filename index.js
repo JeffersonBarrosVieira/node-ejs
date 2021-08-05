@@ -11,25 +11,20 @@ app.use(express.static('public'));
 
 const dados = require('./public/dados')
 
+function criarRota(rota, dados){
+    app.get(`/${rota}`, (req, res) => {
+        res.render(path.join(__dirname + '/views/page'), dados[`${rota}`] );
+    });
+}
 
-app.get('/login', function (req, res) {
-    res.render(path.join(__dirname + '/views/page'), { page: './pages/login', msg: dados.teste });
-});
-
-app.get('/', (req, res) => {
-    res.render(path.join(__dirname + '/views/page'), { page: './pages/home', msg: "Seja bem vindo a Página Inicial" });
-});
-
-app.get('/about', (req, res) => {
-    res.render(path.join(__dirname + '/views/page'), { page: './pages/about', msg: "Aqui você encontrar conteúdos sobre..." });
-});
-
-app.get('/contact', (req, res) => {
-    res.render(path.join(__dirname + '/views/page'), { page: './pages/contact', msg: "Blá Blá Blá" });
-});
+criarRota('/', dados)
+criarRota('about', dados);
+criarRota('login', dados);
+criarRota('contact', dados);
 
 
 
-const port = process.env.PORT || 5000;
+
+const port = process.env.PORT || 3000;
 
 app.listen(port, () => console.log(`Server running on ${port}, http://localhost:${port}`));
