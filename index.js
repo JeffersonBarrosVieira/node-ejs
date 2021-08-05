@@ -7,20 +7,25 @@ app.set('views', path.join(__dirname, 'views'));
 app.engine('ejs', ejs.renderFile);
 app.set('view engine', 'ejs');
 
+app.use(express.static('public'));
+
+const dados = require('./public/dados')
+
+
 app.get('/login', function (req, res) {
-    res.render(path.join(__dirname + '/views/login.ejs'), {msg: "Olá mundo!!! deu certo"});
+    res.render(path.join(__dirname + '/views/page'), { page: './pages/login', msg: dados.teste });
 });
 
 app.get('/', (req, res) => {
-    res.render(path.join(__dirname + '/views/home.ejs'), {msg: "Seja bem vindo a Página Inicial"});
+    res.render(path.join(__dirname + '/views/page'), { page: './pages/home', msg: "Seja bem vindo a Página Inicial" });
 });
 
 app.get('/about', (req, res) => {
-    res.render(path.join(__dirname + '/views/about.ejs'), {msg: "Aqui você encontrar conteúdos sobre..."});
+    res.render(path.join(__dirname + '/views/page'), { page: './pages/about', msg: "Aqui você encontrar conteúdos sobre..." });
 });
 
 app.get('/contact', (req, res) => {
-    res.render(path.join(__dirname + '/views/contact.ejs'), {msg: "Blá Blá Blá"});
+    res.render(path.join(__dirname + '/views/page'), { page: './pages/contact', msg: "Blá Blá Blá" });
 });
 
 
