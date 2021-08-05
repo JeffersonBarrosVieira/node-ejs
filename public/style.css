@@ -6,14 +6,6 @@
     overflow: hidden;
 }
 
-html,
-body {
-    margin: 0 !important;
-    padding: 0 !important;
-    box-sizing: border-box;
-    overflow-x: hidden;
-}
-
 a,
 li {
     text-decoration: none;
