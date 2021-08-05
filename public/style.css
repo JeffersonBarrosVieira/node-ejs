@@ -3,6 +3,15 @@
     padding: 0;
     box-sizing: border-box;
     color: rgb(35, 36, 37);
+    overflow: hidden;
+}
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: rgb(49, 67, 85);
 }
 
 a,
