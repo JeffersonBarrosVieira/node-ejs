@@ -1,7 +1,21 @@
-<h1>Contato</h1>
-<p>
-    <%= msg %>
-</p>
-<ul>
-    <li><a href="/">Inicio</a></li>
-</ul>
+<div style="
+            background-color: lightseagreen;
+            width: 100vw;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            gap: 20px;
+        ">
+    <h1>Contato</h1>
+    
+    <%- include('../organisms/menu', {
+                                        msg,
+                                        rotas:[ 
+                                                {rota: '/' , nome: 'Início' },
+                                            ]
+                                    }
+    ) %>
+
+</div>

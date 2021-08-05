@@ -12,11 +12,11 @@ module.exports = {
     login: {
         page: "./pages/body/login",
         title: "Login",
-        msg: "Olá fulano"
+        msg: "Iae Blz?"
     },
     contact: {
         page: './pages/body/contact',
         title: 'Contato',
-        msg: 'Blá Blá Blá'
+        msg: 'Ligue: 4002-8922'
     },
 }
